@@ -13,3 +13,18 @@ body {
 .redDigit {
   color: red;
 }
+
+#start{
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  background-color:  #7fa8ce;
+  border: 1px solid slategrey;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#start:hover{
+  background-color: rgb(63, 100, 141);
+  transform: scale(1.05,1.05)
+}
