@@ -97,3 +97,20 @@ contactParagraphs[2].innerHTML = "sales@greatidea.io";
 //copyright
 const copyright = document.querySelector("footer p");
 copyright.textContent = "Copyright Great Idea! 2018";
+
+// Task 3
+navAnchors.forEach( a => a.style.color = "green")
+const nav = document.querySelector("header nav")
+const home = document.createElement("a");
+const github = document.createElement("a");
+
+home.textContent = "Linkedin"
+home.style.color = "lightskyblue"
+home.href = "https://www.linkedin.com/in/patrick-rodrigues-5b179417a/"
+nav.appendChild(home)
+
+github.textContent = "Github"
+github.style.color ="lightskyblue"
+github.href = "https://github.com/rodpa715"
+nav.appendChild(github)
+
