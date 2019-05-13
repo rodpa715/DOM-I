@@ -91,8 +91,8 @@ const contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = "Contact";
 const contactParagraphs = document.querySelectorAll(".contact p");
 contactParagraphs[0].innerHTML = "123 Way 456 <br> Street Somewhere, USA";
-contactParagraphs[1].innerHTML = "1 (888) 888-8888";
-contactParagraphs[2].innerHTML = "sales@greatidea.io";
+contactParagraphs[1].textContent = "1 (888) 888-8888";
+contactParagraphs[2].textContent = "sales@greatidea.io";
 
 //copyright
 const copyright = document.querySelector("footer p");
