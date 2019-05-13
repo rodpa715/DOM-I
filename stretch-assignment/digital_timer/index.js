@@ -4,6 +4,8 @@ startButton.addEventListener("click", checkIfActive)
 resetButton.addEventListener("click", reset)
 let active = false
 let timer;
+
+//This function checks if the clock is currently active, it can only be set when it's set to false
 function checkIfActive(){
     console.log(active)
     if(active === false){
@@ -14,14 +16,13 @@ function checkIfActive(){
         startButton.style.cursor = "not-allowed"
     }
 }
-
+//this functions resets the counters to 0 and updates the styles accordingly
 function reset(){
 active = false
 clearInterval(timer)
 digits.forEach(item => item.classList.toggle("redDigit", false))
 startButton.style.backgroundColor = "green"
 startButton.style.cursor = "pointer"
-
 mscount = 0
 mhcount = 0
 secondCount = 0
@@ -33,7 +34,7 @@ secondTens.textContent = "-"
 }
 
 function startTimer(){
-            let start = (function(){ timer = setInterval(update, 10)})()
+    let start = (function(){ timer = setInterval(update, 10)})() //I used IIFE so that it starts automatically when it is called
 }
 
 
@@ -50,7 +51,7 @@ let mhcount = 0
 //seconds
 let secondCount = 0
 let secondTensCount = 0
-
+//counter goes from 0-10 when it gets to 10 it increments 1 to the place value bigger, miliseconds tens = 10 then +1  milisenconds hundreds, etc....
 function update(){
     msTens.textContent = mscount
     msHundreds.textContent = mhcount
