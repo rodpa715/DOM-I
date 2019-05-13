@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 //nav anchors
 const navAnchors = document.querySelectorAll("nav a");
 navAnchors[0].textContent = "Services";
@@ -48,6 +49,7 @@ navAnchors[2].textContent = "Vision";
 navAnchors[3].textContent = "Feature";
 navAnchors[4].textContent = "About";
 navAnchors[5].textContent = "Contact";
+
 //section header under nav
 const headline = document.querySelector(".cta-text h1");
 headline.innerHTML = "DOM <br> IS <br> AWESOME" //interesting use of innerHTML, is there a better solution?
@@ -55,3 +57,15 @@ const btn = document.querySelector(".cta-text button ");
 btn.textContent = "Get Started"
 const codeSnippet = document.querySelector("#cta-img");
 codeSnippet.src = "./img/header-img.png" //setAttribute("src", "./img/header-img.png")
+
+
+//.main-content paragraphs & headlines
+  //.top-content
+    //Headlines
+const topH4 = document.querySelectorAll(".top-content h4");
+topH4[0].textContent = "Features";
+topH4[1].textContent = "About";
+    //Paragraphs
+const topParagraphs = document.querySelectorAll(".top-content p");
+topParagraphs[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+topParagraphs[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
