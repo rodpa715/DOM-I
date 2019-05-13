@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -43,60 +43,60 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //nav anchors
 const navAnchors = document.querySelectorAll("nav a");
-navAnchors[0].textContent = "Services";
-navAnchors[1].textContent = "Product";
-navAnchors[2].textContent = "Vision";
-navAnchors[3].textContent = "Feature";
-navAnchors[4].textContent = "About";
-navAnchors[5].textContent = "Contact";
+navAnchors[0].textContent = siteContent["nav"]["nav-item-1"]
+navAnchors[1].textContent = siteContent["nav"]["nav-item-2"]
+navAnchors[2].textContent = siteContent["nav"]["nav-item-3"]
+navAnchors[3].textContent = siteContent["nav"]["nav-item-4"]
+navAnchors[4].textContent = siteContent["nav"]["nav-item-5"]
+navAnchors[5].textContent = siteContent["nav"]["nav-item-6"]
 
 //section header under nav
 const headline = document.querySelector(".cta-text h1");
-headline.innerHTML = "DOM <br> IS <br> AWESOME" //interesting use of innerHTML, is there a better solution?
+headline.innerHTML = siteContent.cta.h1
 const btn = document.querySelector(".cta-text button ");
-btn.textContent = "Get Started"
+btn.textContent = siteContent.cta.button
 const codeSnippet = document.querySelector("#cta-img");
-codeSnippet.src = "./img/header-img.png" //setAttribute("src", "./img/header-img.png")
+codeSnippet.src = siteContent.cta["img-src"]
 
 
 //.main-content paragraphs & headlines
   //.top-content
     //Headlines
 const topH4 = document.querySelectorAll(".top-content h4");
-topH4[0].textContent = "Features";
-topH4[1].textContent = "About";
+topH4[0].textContent = siteContent["main-content"]["features-h4"]
+topH4[1].textContent = siteContent["main-content"]["about-h4"]
     //Paragraphs
 const topParagraphs = document.querySelectorAll(".top-content p");
-topParagraphs[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-topParagraphs[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+topParagraphs[0].textContent = siteContent["main-content"]["features-content"]
+topParagraphs[1].textContent = siteContent["main-content"]["about-content"]
 
 //middle image
 const middleImg = document.querySelector("#middle-img");
-middleImg.src = "./img/mid-page-accent.jpg";
+middleImg.src = siteContent["main-content"]["middle-img-src"]
 
   //.bottom-content
     //Headlines
 const bottomH4 = document.querySelectorAll(".bottom-content h4");
-bottomH4[0].textContent = "Services";
-bottomH4[1].textContent = "Product";
-bottomH4[2].textContent = "Vision";
+bottomH4[0].textContent = siteContent["main-content"]["services-h4"]
+bottomH4[1].textContent = siteContent["main-content"]["product-h4"]
+bottomH4[2].textContent = siteContent["main-content"]["vision-h4"]
     //Paragraphs
 const bottomParagraphs = document.querySelectorAll(".bottom-content p");
-bottomParagraphs[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-bottomParagraphs[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-bottomParagraphs[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomParagraphs[0].textContent = siteContent["main-content"]["services-content"]
+bottomParagraphs[1].textContent = siteContent["main-content"]["product-content"]
+bottomParagraphs[2].textContent = siteContent["main-content"]["vision-content"]
 
 //contact
 const contactH4 = document.querySelector(".contact h4");
-contactH4.textContent = "Contact";
+contactH4.textContent = siteContent.contact["contact-h4"]
 const contactParagraphs = document.querySelectorAll(".contact p");
-contactParagraphs[0].innerHTML = "123 Way 456 <br> Street Somewhere, USA";
-contactParagraphs[1].textContent = "1 (888) 888-8888";
-contactParagraphs[2].textContent = "sales@greatidea.io";
+contactParagraphs[0].innerHTML = siteContent.contact["address"]
+contactParagraphs[1].textContent = siteContent.contact["phone"]
+contactParagraphs[2].textContent = siteContent.contact["email"]
 
 //copyright
 const copyright = document.querySelector("footer p");
-copyright.textContent = "Copyright Great Idea! 2018";
+copyright.textContent = siteContent.footer.copyright
 
 // Task 3
 navAnchors.forEach( a => a.style.color = "green")
@@ -112,7 +112,7 @@ nav.appendChild(home)
 github.textContent = "Github"
 github.style.color ="lightskyblue"
 github.href = "https://github.com/rodpa715"
-nav.appendChild(github)
+nav.prepend(github)
 
 //stretch goals
 
