@@ -40,7 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
+//nav anchors
 const navAnchors = document.querySelectorAll("nav a");
 navAnchors[0].textContent = "Services";
 navAnchors[1].textContent = "Product";
@@ -48,5 +48,10 @@ navAnchors[2].textContent = "Vision";
 navAnchors[3].textContent = "Feature";
 navAnchors[4].textContent = "About";
 navAnchors[5].textContent = "Contact";
-
-
+//section header under nav
+const headline = document.querySelector(".cta-text h1");
+headline.innerHTML = "DOM <br> IS <br> AWESOME" //interesting use of innerHTML, is there a better solution?
+const btn = document.querySelector(".cta-text button ");
+btn.textContent = "Get Started"
+const codeSnippet = document.querySelector("#cta-img");
+codeSnippet.src = "./img/header-img.png" //setAttribute("src", "./img/header-img.png")
