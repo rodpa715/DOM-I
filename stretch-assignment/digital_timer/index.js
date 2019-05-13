@@ -1,7 +1,17 @@
-const startButton = document.querySelector("#start")
-startButton.addEventListener("click", startTimer)
+const startButton = document.querySelector("button")
+startButton.addEventListener("click", checkIfActive)
+let active = false
+function checkIfActive(){
+    console.log(active)
+    if(active === false){
+        active = true
+        startTimer()
+        startButton.style.backgroundColor = "grey"
+        startButton.style.cursor = "not-allowed"
+    }
+}
 function startTimer(){
-    let digits = setInterval(update, 10)
+            let digits = (function(){setInterval(update, 10)})()
 }
 
 
@@ -24,7 +34,9 @@ function update(){
     secondOnes.textContent = secondCount
     secondTens.textContent = secondTensCount
     if(secondTensCount === 1){
-        clearInterval(digits)
+        active = false
+        startButton.style.backgroundColor = "green"
+        startButton.style.cursor = "pointer"
         return
     }else{
         ++mscount
