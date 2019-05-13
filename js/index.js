@@ -69,3 +69,19 @@ topH4[1].textContent = "About";
 const topParagraphs = document.querySelectorAll(".top-content p");
 topParagraphs[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 topParagraphs[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+//middle image
+const middleImg = document.querySelector("#middle-img");
+middleImg.src = "./img/mid-page-accent.jpg";
+
+  //.bottom-content
+    //Headlines
+const bottomH4 = document.querySelectorAll(".bottom-content h4");
+bottomH4[0].textContent = "Services";
+bottomH4[1].textContent = "Product";
+bottomH4[2].textContent = "Vision";
+    //Paragraphs
+const bottomParagraphs = document.querySelectorAll(".bottom-content p");
+bottomParagraphs[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomParagraphs[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomParagraphs[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
