@@ -114,3 +114,38 @@ github.style.color ="lightskyblue"
 github.href = "https://github.com/rodpa715"
 nav.appendChild(github)
 
+//stretch goals
+
+const innerHeader = document.querySelector(".cta");
+innerHeader.style.justifyContent = "space-around"
+btn.style.width = "20rem"
+btn.style.height = "3.5rem"
+btn.style.borderRadius = "1rem"
+
+// const btnHover = document.querySelector(".cta-text button:hover")
+// btnHover[0].style.backgroundColor = "lightslategray" 
+
+// This doesn't work since its inline style and it can't target pseudo classes 
+
+btn.addEventListener("mouseenter", () => btn.style.backgroundColor = "lightslategray") //it doesnt update back since it changes the inline style even with "mouseover"
+btn.addEventListener("mouseleave", () => btn.style.backgroundColor = "white") 
+
+btn.addEventListener("click", updateContent)
+
+function updateContent(){
+  const navAnchorsAll = document.querySelectorAll("nav a"); // Twice the same querySelector so that created Elements who are created get reloaded.
+  const allParagraphsMain = document.querySelectorAll(".text-content p")
+  const allParagraphsH4 = document.querySelectorAll(".text-content h4")
+  const body = document.querySelector("body")
+  const updatedParagraph = "this content was updated automatically lorem ipsum something this is not automatically generated I'm to lazy to type in google some auto generated content since I have pretty fast fingers"
+
+  body.style.backgroundColor = "antiquewhite"
+
+  navAnchorsAll.forEach(a => a.style.color = "saddlebrown")
+  navAnchorsAll.forEach(a => a.style.fontWeight = "900")
+  allParagraphsMain.forEach(p => p.textContent = updatedParagraph)
+  allParagraphsH4.forEach(h4 => h4.textContent = "Updated Headline")
+
+  middleImg.src = "https://bit.ly/30fIzjp"
+  
+}
