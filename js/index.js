@@ -85,3 +85,15 @@ const bottomParagraphs = document.querySelectorAll(".bottom-content p");
 bottomParagraphs[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 bottomParagraphs[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 bottomParagraphs[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+//contact
+const contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = "Contact";
+const contactParagraphs = document.querySelectorAll(".contact p");
+contactParagraphs[0].innerHTML = "123 Way 456 <br> Street Somewhere, USA";
+contactParagraphs[1].innerHTML = "1 (888) 888-8888";
+contactParagraphs[2].innerHTML = "sales@greatidea.io";
+
+//copyright
+const copyright = document.querySelector("footer p");
+copyright.textContent = "Copyright Great Idea! 2018";
